@@ -4,7 +4,7 @@ def print_matrix(matrix):
     n = len(matrix)
     m = len(matrix[0])
 
-    # Se generan los nuevos tableros en forma de listas de listas con los nuevos caracteres
+    # Se transforman a str
     matrix = [map(str, x) for x in matrix]
 
     # Se imprimen las letras representando cada columna
@@ -20,7 +20,7 @@ def print_matrix(matrix):
 
     print(columnas)
     print(' ' * 4 + '┌' + '─' * (4 * m + 2) + '┐')
-    # Se generan las filas del mapa rival con sus respectivas celdas
+    # Se generan las filas de la matriz con sus respectivas celdas
     indice = 0 
     for i_1 in range(8): #A
         for i_2 in range(8): #0
@@ -39,14 +39,13 @@ def print_matrix(matrix):
             indice += 1
     print(' ' * 4 + '└' + '─' * (4 * m + 2) + '┘')
 
-
 def save_matrix(matrix):
 
     # Se obtienen las dimensiones del tablero
     n = len(matrix)
     m = len(matrix[0])
 
-    # Se generan los nuevos tableros en forma de listas de listas con los nuevos caracteres
+    #se transforman a str
     matrix = [map(str, x) for x in matrix]
 
     # Se imprimen las letras representando cada columna
@@ -65,7 +64,7 @@ def save_matrix(matrix):
 
         file.write(columnas+"\n")
         file.write(' ' * 4 + '┌' + '─' * (4 * m + 2) + '┐'+"\n")
-        # Se generan las filas del mapa rival con sus respectivas celdas
+        # Se generan las filas de la matriz con sus respectivas celdas
         indice = 0 
         for i_1 in range(8): #A
             for i_2 in range(8): #0
